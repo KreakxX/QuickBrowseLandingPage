@@ -189,7 +189,7 @@ export default function Home() {
                   What Makes It Special
                 </span>
               </h2>
-              <div className="space-y-10">
+              <div className="space-y-10 bg-zinc-700/20 p-6 rounded-3xl">
                 <div className="flex items-start gap-6 group">
                   <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-indigo-500/20 to-indigo-600/30 rounded-xl flex items-center justify-center mt-1 group-hover:scale-110 transition-transform duration-300">
                     <div className="w-4 h-4 bg-indigo-400 rounded-full"></div>
@@ -252,7 +252,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-zinc-800/40 to-zinc-900/60 grid grid-cols-2 gap-6 p-10 rounded-3xl border border-zinc-700/30 backdrop-blur-sm relative">
+            <div className="bg-gradient-to-br from-zinc-800/40 to-zinc-900/60 grid grid-cols-2 gap-6 p-10 mt-10 rounded-3xl border border-zinc-700/30 backdrop-blur-sm relative">
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent rounded-3xl"></div>
               <img
                 className="rounded-xl border border-zinc-600/50 shadow-lg hover:scale-105 transition-transform duration-300 relative z-10"
