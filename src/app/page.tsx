@@ -24,10 +24,10 @@ export default function Home() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="text-white space-y-10">
-              <h1 className="text-6xl lg:text-8xl font-bold leading-[0.9] tracking-tight">
+            <div className="text-white space-y-10 ">
+              <h1 className="text-6xl lg:text-8xl font-bold leading-[0.9] tracking-tight ">
                 The Future of
-                <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent block mt-2">
+                <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent block mt-2 pb-5">
                   Web Browsing
                 </span>
               </h1>
