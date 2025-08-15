@@ -4,14 +4,14 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="min-h-screen bg-zinc-950 relative overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none ">
+      <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-indigo-500/25 via-zinc-400/10 to-indigo-600/15 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute -top-32 right-16 w-80 h-80 bg-gradient-to-bl from-zinc-400/12 via-indigo-400/25 to-zinc-500/8 rounded-full blur-2xl"></div>
         <div className="absolute top-1/2 -left-32 w-64 h-64 bg-gradient-to-r from-indigo-400/20 to-zinc-400/15 rounded-full blur-xl"></div>
         <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-gradient-to-tl from-indigo-300/15 to-zinc-300/10 rounded-full blur-2xl"></div>
       </div>
 
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden ">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/LandingPageBackground.png"
@@ -27,7 +27,7 @@ export default function Home() {
             <div className="text-white space-y-10">
               <h1 className="text-6xl lg:text-8xl font-bold leading-[0.9] tracking-tight">
                 The Future of
-                <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent block mt-2 pb-10">
+                <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent block mt-2">
                   Web Browsing
                 </span>
               </h1>
@@ -83,7 +83,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="group bg-gradient-to-br from-zinc-800/50 to-zinc-900/80 border border-zinc-700/50 p-8 rounded-2xl hover:bg-gradient-to-br hover:from-zinc-700/60 hover:to-zinc-800/90 hover:border-indigo-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-2">
-              <div className="h-[60%] bg-gradient-to-br from-zinc-100 to-zinc-200 p-8 rounded-2xl mb-8 flex justify-center items-center group-hover:scale-105 transition-transform duration-300">
+              <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-8 rounded-2xl mb-8 h-[60%] flex justify-center items-center group-hover:scale-105 transition-transform duration-300">
                 <img src={"bookmarks.svg"} />
               </div>
               <h3 className="text-2xl font-bold text-indigo-400 mb-4">
@@ -96,7 +96,7 @@ export default function Home() {
             </div>
 
             <div className="group bg-gradient-to-br from-zinc-800/50 to-zinc-900/80 border border-zinc-700/50 p-8 rounded-2xl hover:bg-gradient-to-br hover:from-zinc-700/60 hover:to-zinc-800/90 hover:border-indigo-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-2">
-              <div className="h-[60%] bg-gradient-to-br from-zinc-100 to-zinc-200 p-8 rounded-2xl mb-8 flex justify-center items-center group-hover:scale-105 transition-transform duration-300">
+              <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-8 rounded-2xl mb-8 h-[60%] flex justify-center items-center group-hover:scale-105 transition-transform duration-300">
                 <img src={"tabs.svg"} />
               </div>
               <h3 className="text-2xl font-bold text-indigo-400 mb-4">
@@ -109,7 +109,7 @@ export default function Home() {
             </div>
 
             <div className="group bg-gradient-to-br from-zinc-800/50 to-zinc-900/80 border border-zinc-700/50 p-8 rounded-2xl hover:bg-gradient-to-br hover:from-zinc-700/60 hover:to-zinc-800/90 hover:border-indigo-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-2">
-              <div className="h-[60%] bg-gradient-to-br from-zinc-100 to-zinc-200 p-8 rounded-2xl mb-8 flex justify-center items-center group-hover:scale-105 transition-transform duration-300">
+              <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-8 rounded-2xl mb-8 h-[60%] flex justify-center items-center group-hover:scale-105 transition-transform duration-300">
                 <img src={"preferences.svg"} />
               </div>
               <h3 className="text-2xl font-bold text-indigo-400 mb-4">
@@ -122,7 +122,7 @@ export default function Home() {
             </div>
 
             <div className="group bg-gradient-to-br from-zinc-800/50 to-zinc-900/80 border border-zinc-700/50 p-8 rounded-2xl hover:bg-gradient-to-br hover:from-zinc-700/60 hover:to-zinc-800/90 hover:border-indigo-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-2">
-              <div className="h-[60%] bg-gradient-to-br from-zinc-100 to-zinc-200 p-8 rounded-2xl mb-8 flex justify-center items-center group-hover:scale-105 transition-transform duration-300">
+              <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-8 rounded-2xl mb-8 h-[60%] flex justify-center items-center group-hover:scale-105 transition-transform duration-300">
                 <img src={"security.svg"} />
               </div>
               <h3 className="text-2xl font-bold text-indigo-400 mb-4">
@@ -135,7 +135,7 @@ export default function Home() {
             </div>
 
             <div className="group bg-gradient-to-br from-zinc-800/50 to-zinc-900/80 border border-zinc-700/50 p-8 rounded-2xl hover:bg-gradient-to-br hover:from-zinc-700/60 hover:to-zinc-800/90 hover:border-indigo-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-2">
-              <div className="h-[60%] bg-gradient-to-br from-zinc-100 to-zinc-200 p-8 rounded-2xl mb-8 flex justify-center items-center group-hover:scale-105 transition-transform duration-300">
+              <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-8 rounded-2xl mb-8 h-[60%] flex justify-center items-center group-hover:scale-105 transition-transform duration-300">
                 <img src={"browsing.svg"} />
               </div>
               <h3 className="text-2xl font-bold text-indigo-400 mb-4">
@@ -148,7 +148,7 @@ export default function Home() {
             </div>
 
             <div className="group bg-gradient-to-br from-zinc-800/50 to-zinc-900/80 border border-zinc-700/50 p-8 rounded-2xl hover:bg-gradient-to-br hover:from-zinc-700/60 hover:to-zinc-800/90 hover:border-indigo-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-2">
-              <div className="h-[60%] bg-gradient-to-br from-zinc-100 to-zinc-200 p-8 rounded-2xl mb-8 flex justify-center items-center group-hover:scale-105 transition-transform duration-300">
+              <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-8 rounded-2xl mb-8 h-[60%] flex justify-center items-center group-hover:scale-105 transition-transform duration-300">
                 <img src={"shared.svg"} />
               </div>
               <h3 className="text-2xl font-bold text-indigo-400 mb-4">
@@ -157,6 +157,112 @@ export default function Home() {
               <p className="text-zinc-400 leading-relaxed">
                 Chat with your team in real-time and share links seamlessly.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-32 bg-gradient-to-b from-zinc-950 to-zinc-900 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-indigo-400/15 to-indigo-600/10 rounded-full blur-xl animate-pulse"></div>
+          <div
+            className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-zinc-400/20 to-indigo-400/15 rounded-full blur-lg animate-bounce"
+            style={{ animationDuration: "3s" }}
+          ></div>
+          <div
+            className="absolute top-1/3 left-1/4 w-16 h-16 bg-gradient-to-br from-indigo-300/25 to-zinc-300/15 rounded-full blur-md animate-pulse"
+            style={{ animationDelay: "1s" }}
+          ></div>
+          <div
+            className="absolute top-2/3 right-1/3 w-20 h-20 bg-gradient-to-br from-zinc-400/18 to-indigo-500/12 rounded-full blur-lg animate-bounce"
+            style={{ animationDuration: "4s", animationDelay: "2s" }}
+          ></div>
+          <div
+            className="absolute bottom-40 left-16 w-28 h-28 bg-gradient-to-br from-indigo-400/12 to-zinc-400/18 rounded-full blur-xl animate-pulse"
+            style={{ animationDelay: "0.5s" }}
+          ></div>
+          <div
+            className="absolute bottom-20 right-10 w-36 h-36 bg-gradient-to-br from-zinc-300/15 to-indigo-300/20 rounded-full blur-2xl animate-bounce"
+            style={{ animationDuration: "5s" }}
+          ></div>
+        </div>
+
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="flex flex-col items-center justify-center text-center">
+            <h2 className="text-6xl lg:text-7xl font-bold text-white mb-24 tracking-tight hover:scale-105 transition-transform duration-300">
+              <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
+                Browser Showcase
+              </span>
+            </h2>
+
+            <div className="space-y-32 max-w-6xl">
+              {/* Session Chat Feature */}
+              <div className="group">
+                <h3 className="text-4xl lg:text-5xl font-bold text-white mb-12 tracking-tight group-hover:scale-105 transition-all duration-300">
+                  <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
+                    Session Chat
+                  </span>
+                </h3>
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-zinc-500/10 rounded-3xl blur-xl"></div>
+                  <img
+                    src="SessionChat.png"
+                    alt="Session Chat Feature"
+                    className="w-full rounded-3xl shadow-2xl border border-zinc-700/50 hover:scale-[1.02] transition-all duration-500 relative z-10"
+                  />
+                </div>
+              </div>
+
+              {/* Split Screen Feature */}
+              <div className="group">
+                <h3 className="text-4xl lg:text-5xl font-bold text-white mb-12 tracking-tight group-hover:scale-105 transition-all duration-300">
+                  <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
+                    Split Screen
+                  </span>
+                </h3>
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-zinc-500/10 to-indigo-500/10 rounded-3xl blur-xl"></div>
+                  <img
+                    src="SplitScreen.png"
+                    alt="Split Screen Feature"
+                    className="w-full rounded-3xl shadow-2xl border border-zinc-700/50 hover:scale-[1.02] transition-all duration-500 relative z-10"
+                  />
+                </div>
+              </div>
+
+              {/* Shared Session Feature */}
+              <div className="group">
+                <h3 className="text-4xl lg:text-5xl font-bold text-white mb-12 tracking-tight group-hover:scale-105 transition-all duration-300">
+                  <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
+                    Shared Session
+                  </span>
+                </h3>
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-zinc-500/10 rounded-3xl blur-xl"></div>
+                  <img
+                    src="sharedsession.png"
+                    alt="Shared Session Feature"
+                    className="w-full rounded-3xl shadow-2xl border border-zinc-700/50 hover:scale-[1.02] transition-all duration-500 relative z-10"
+                  />
+                </div>
+              </div>
+
+              {/* Watch Together Feature */}
+              <div className="group">
+                <h3 className="text-4xl lg:text-5xl font-bold text-white mb-12 tracking-tight group-hover:scale-105 transition-all duration-300">
+                  <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
+                    Watch Together
+                  </span>
+                </h3>
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-zinc-500/10 to-indigo-500/10 rounded-3xl blur-xl"></div>
+                  <img
+                    src="Watchtogether.png"
+                    alt="Watch Together Feature"
+                    className="w-full rounded-3xl shadow-2xl border border-zinc-700/50 hover:scale-[1.02] transition-all duration-500 relative z-10"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -184,7 +290,7 @@ export default function Home() {
                   What Makes It Special
                 </span>
               </h2>
-              <div className="space-y-10 bg-zinc-700/20 p-6 rounded-3xl">
+              <div className="space-y-10">
                 <div className="flex items-start gap-6 group">
                   <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-indigo-500/20 to-indigo-600/30 rounded-xl flex items-center justify-center mt-1 group-hover:scale-110 transition-transform duration-300">
                     <div className="w-4 h-4 bg-indigo-400 rounded-full"></div>
@@ -247,7 +353,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-zinc-800/40 to-zinc-900/60 grid grid-cols-2 gap-6 p-10 mt-10 rounded-3xl border border-zinc-700/30 backdrop-blur-sm relative">
+            <div className="bg-gradient-to-br from-zinc-800/40 to-zinc-900/60 grid grid-cols-2 gap-6 p-10 rounded-3xl border border-zinc-700/30 backdrop-blur-sm relative">
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent rounded-3xl"></div>
               <img
                 className="rounded-xl border border-zinc-600/50 shadow-lg hover:scale-105 transition-transform duration-300 relative z-10"
@@ -269,59 +375,6 @@ export default function Home() {
                 src="sharedsession.png"
                 alt="Shared Session Feature"
               />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-32 bg-gradient-to-b from-zinc-900 to-zinc-950 relative">
-        <div className="absolute inset-0 w-full h-full pointer-events-none"></div>
-
-        <div className="container mx-auto px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col items-center justify-center text-center">
-            <h2 className="text-5xl lg:text-6xl font-bold text-white mb-16 tracking-tight">
-              <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
-                Browser Showcase
-              </span>
-            </h2>
-
-            <div>
-              <h2 className="text-5xl lg:text-6xl font-bold text-white mb-16 tracking-tight">
-                <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
-                  Session Chat
-                </span>
-              </h2>
-              <img
-                src={"SessionChat.png"}
-                className="w-full h-full mb-10 rounded-2xl"
-              ></img>
-              <h2 className="text-5xl lg:text-6xl font-bold text-white mb-16 tracking-tight">
-                <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
-                  Splitscreen
-                </span>
-              </h2>
-              <img
-                src={"SplitScreen.png"}
-                className="w-full h-full mb-10 rounded-2xl"
-              ></img>
-              <h2 className="text-5xl lg:text-6xl font-bold text-white mb-16 tracking-tight">
-                <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
-                  Shared Session
-                </span>
-              </h2>
-              <img
-                src={"sharedsession.png"}
-                className="w-full h-full mb-10 rounded-2xl"
-              ></img>
-              <h2 className="text-5xl lg:text-6xl font-bold text-white mb-16 tracking-tight">
-                <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
-                  Watch together
-                </span>
-              </h2>
-              <img
-                src={"Watchtogether.png"}
-                className="w-full h-full mb-10 rounded-2xl"
-              ></img>
             </div>
           </div>
         </div>
