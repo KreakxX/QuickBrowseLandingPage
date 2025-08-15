@@ -4,19 +4,14 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="min-h-screen bg-zinc-950 relative overflow-hidden">
-      <nav className="flex justify-center ">
-        <li>
-          <h1 className="font-bold text-indigo-500 text-2xl">QuickBrowse</h1>
-        </li>
-      </nav>
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none ">
         <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-indigo-500/25 via-zinc-400/10 to-indigo-600/15 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute -top-32 right-16 w-80 h-80 bg-gradient-to-bl from-zinc-400/12 via-indigo-400/25 to-zinc-500/8 rounded-full blur-2xl"></div>
         <div className="absolute top-1/2 -left-32 w-64 h-64 bg-gradient-to-r from-indigo-400/20 to-zinc-400/15 rounded-full blur-xl"></div>
         <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-gradient-to-tl from-indigo-300/15 to-zinc-300/10 rounded-full blur-2xl"></div>
       </div>
 
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden ">
         <div className="absolute inset-0 z-0">
           <Image
             src="/LandingPageBackground.png"
@@ -274,6 +269,59 @@ export default function Home() {
                 src="sharedsession.png"
                 alt="Shared Session Feature"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-32 bg-gradient-to-b from-zinc-900 to-zinc-950 relative">
+        <div className="absolute inset-0 w-full h-full pointer-events-none"></div>
+
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="flex flex-col items-center justify-center text-center">
+            <h2 className="text-5xl lg:text-6xl font-bold text-white mb-16 tracking-tight">
+              <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
+                Browser Showcase
+              </span>
+            </h2>
+
+            <div>
+              <h2 className="text-5xl lg:text-6xl font-bold text-white mb-16 tracking-tight">
+                <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
+                  Session Chat
+                </span>
+              </h2>
+              <img
+                src={"SessionChat.png"}
+                className="w-full h-full mb-10 rounded-2xl"
+              ></img>
+              <h2 className="text-5xl lg:text-6xl font-bold text-white mb-16 tracking-tight">
+                <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
+                  Splitscreen
+                </span>
+              </h2>
+              <img
+                src={"SplitScreen.png"}
+                className="w-full h-full mb-10 rounded-2xl"
+              ></img>
+              <h2 className="text-5xl lg:text-6xl font-bold text-white mb-16 tracking-tight">
+                <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
+                  Shared Session
+                </span>
+              </h2>
+              <img
+                src={"sharedsession.png"}
+                className="w-full h-full mb-10 rounded-2xl"
+              ></img>
+              <h2 className="text-5xl lg:text-6xl font-bold text-white mb-16 tracking-tight">
+                <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
+                  Watch together
+                </span>
+              </h2>
+              <img
+                src={"Watchtogether.png"}
+                className="w-full h-full mb-10 rounded-2xl"
+              ></img>
             </div>
           </div>
         </div>
