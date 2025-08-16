@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
 import { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, Github } from "lucide-react";
 
 export default function Home() {
   const steps = [
@@ -112,7 +112,7 @@ export default function Home() {
         <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-gradient-to-tl from-indigo-300/15 to-zinc-300/10 rounded-full blur-2xl"></div>
       </div>
 
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <div className="  items-center">
             <div className="text-white space-y-10 ">
@@ -147,8 +147,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-zinc-950 relative overflow-hidden">
-        <div className="container mx-auto px-6 lg:px-8 py-16 relative z-10">
+      <section className="pb-20 bg-zinc-950 relative overflow-hidden w-full">
+        <div className="mb-20 pb-20">
+          <div className="flex justify-center">
+            <div className="p-6 bg-zinc-900 rounded-2xl  w-[65vw]   hover:border-indigo-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-indigo-500/50 hover:-translate-y-2">
+              <img src="AppShowcase.png" className="" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div className=" px-6 lg:px-8 py-16 relative z-10 w-full">
           <div className="text-center mb-16">
             <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight">
               <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
@@ -161,7 +169,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex justify-center mb-12">
+          <div className="flex justify-center mb-12 w-full">
             <div className="flex space-x-4">
               {steps.map((step, index) => (
                 <button
@@ -179,7 +187,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="max-w-6xl mx-auto">
+          <div className="w-full">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="order-2 lg:order-1">
                 <div className="bg-gradient-to-br from-zinc-800/40 to-zinc-900/60 p-8 rounded-3xl border border-zinc-700/30 backdrop-blur-sm relative shadow-md hover:shadow-lg hover:shadow-indigo-500/50 transition-all duration-500 ">
@@ -187,7 +195,7 @@ export default function Home() {
                   <img
                     src={current.image || "/placeholder.svg"}
                     alt={current.title}
-                    className="w-full h-80 object-cover rounded-xl border border-zinc-600/50 shadow-lg relative z-10"
+                    className="w-full h-153 object-cover rounded-xl border border-zinc-600/50 shadow-lg relative z-10"
                   />
                 </div>
               </div>
@@ -345,6 +353,75 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="py-24 bg-gradient-to-b from-zinc-950 to-zinc-900 relative">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10">
+          <div className="bg-gradient-to-br from-zinc-800/40 to-zinc-900/60 border border-zinc-700/30 rounded-3xl p-12 backdrop-blur-sm">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your
+              <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
+                {" "}
+                Browsing Experience?
+              </span>
+            </h2>
+            <p className="text-xl text-zinc-400 mb-8 max-w-2xl mx-auto">
+              Join thousands of users who are already experiencing the future of
+              collaborative web browsing.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 text-white font-semibold py-4 px-8 rounded-2xl shadow-lg shadow-indigo-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/40 hover:scale-105"
+              >
+                Get Early Access
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-zinc-600 text-zinc-300 hover:bg-zinc-800 hover:text-white py-4 px-8 rounded-2xl transition-all duration-300 bg-transparent"
+              >
+                Learn More
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="bg-zinc-900 border-t border-zinc-800 py-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="md:col-span-2">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                QuickBrowse
+              </h3>
+              <p className="text-zinc-400 mb-4 max-w-md">
+                The future of collaborative web browsing. Browse together, work
+                smarter, and stay connected with your team.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-white font-semibold mb-4">Product</h4>
+              <ul className="space-y-2 text-zinc-400">
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Features
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Download
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-zinc-800 mt-12 pt-8 text-center text-zinc-400">
+            <p>&copy; 2024 QuickBrowse. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
 
       {/* <section className="py-32 bg-gradient-to-b from-zinc-900 to-zinc-950 relative">
         <div className="absolute inset-0 w-full h-full pointer-events-none">
