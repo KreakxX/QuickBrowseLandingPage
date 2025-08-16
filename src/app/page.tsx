@@ -60,6 +60,32 @@ export default function Home() {
         "Communicate with all your friends or co workers",
       ],
     },
+    {
+      id: 5,
+      title: "Custom Themes",
+      image: "/Themes.png",
+      description:
+        "Choose from predefined Themes to customize your browsing experience ",
+      instructions: [
+        "Open the Theme panel from the sidebar",
+        "Choose your Theme",
+        "Experience your new Browsing experience with your new Theme",
+        "Productivity boost",
+      ],
+    },
+    {
+      id: 6,
+      title: "Bookmarks",
+      image: "/Bookmarks.png",
+      description:
+        "Save tabs as Bookmarks an reopen and start browsing again whenever you want  ",
+      instructions: [
+        "Save a Tab as a Bookmark ",
+        "Open the Bookmark panel from the sidebar",
+        "Select a Bookmark an open it",
+        "start browsing where you left ",
+      ],
+    },
   ];
 
   const [currentStep, setCurrentStep] = useState(0);
@@ -92,7 +118,7 @@ export default function Home() {
             src="/LandingPageBackground.png"
             alt="Tech background"
             fill
-            className="object-contain opacity-15 scale-150"
+            className="object-contain opacity-20 scale-150"
             priority
           />
         </div>
@@ -116,10 +142,14 @@ export default function Home() {
                   Join Waitlist
                 </Button>
                 <Button
+                  onClick={() => {
+                    window.location.href =
+                      "https://github.com/KreakxX/QuickBrowse";
+                  }}
                   variant="outline"
                   className="border-zinc-600 text-zinc-300 hover:bg-zinc-800 hover:text-white py-4 px-8 rounded-2xl transition-all duration-300 bg-transparent"
                 >
-                  Learn More
+                  View Github
                 </Button>
               </div>
             </div>
@@ -140,104 +170,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-32 bg-gradient-to-b from-zinc-950 to-zinc-900 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-950/10 to-transparent"></div>
-
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl lg:text-6xl font-bold text-white mb-8 tracking-tight">
-              <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
-                Why Choose Our Browser
-              </span>
-            </h2>
-            <p className="text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed">
-              Built from the ground up with performance, security, and user
-              experience in mind.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="group bg-gradient-to-br from-zinc-800/50 to-zinc-900/80 border border-zinc-700/50 p-8 rounded-2xl hover:bg-gradient-to-br hover:from-zinc-700/60 hover:to-zinc-800/90 hover:border-indigo-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-2">
-              <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-8 rounded-2xl mb-8 h-[60%] flex justify-center items-center group-hover:scale-105 transition-transform duration-300">
-                <img src={"bookmarks.svg"} />
-              </div>
-              <h3 className="text-2xl font-bold text-indigo-400 mb-4">
-                Bookmarks
-              </h3>
-              <p className="text-zinc-400 leading-relaxed">
-                Save your favorite tabs and open them whenever you want with
-                intelligent organization.
-              </p>
-            </div>
-
-            <div className="group bg-gradient-to-br from-zinc-800/50 to-zinc-900/80 border border-zinc-700/50 p-8 rounded-2xl hover:bg-gradient-to-br hover:from-zinc-700/60 hover:to-zinc-800/90 hover:border-indigo-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-2">
-              <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-8 rounded-2xl mb-8 h-[60%] flex justify-center items-center group-hover:scale-105 transition-transform duration-300">
-                <img src={"tabs.svg"} />
-              </div>
-              <h3 className="text-2xl font-bold text-indigo-400 mb-4">
-                Smart Tabs
-              </h3>
-              <p className="text-zinc-400 leading-relaxed">
-                Easily add and manage all your important tabs with advanced
-                grouping features.
-              </p>
-            </div>
-
-            <div className="group bg-gradient-to-br from-zinc-800/50 to-zinc-900/80 border border-zinc-700/50 p-8 rounded-2xl hover:bg-gradient-to-br hover:from-zinc-700/60 hover:to-zinc-800/90 hover:border-indigo-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-2">
-              <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-8 rounded-2xl mb-8 h-[60%] flex justify-center items-center group-hover:scale-105 transition-transform duration-300">
-                <img src={"preferences.svg"} />
-              </div>
-              <h3 className="text-2xl font-bold text-indigo-400 mb-4">
-                Custom Themes
-              </h3>
-              <p className="text-zinc-400 leading-relaxed">
-                Choose from 30+ beautiful themes to customize your browsing
-                experience.
-              </p>
-            </div>
-
-            <div className="group bg-gradient-to-br from-zinc-800/50 to-zinc-900/80 border border-zinc-700/50 p-8 rounded-2xl hover:bg-gradient-to-br hover:from-zinc-700/60 hover:to-zinc-800/90 hover:border-indigo-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-2">
-              <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-8 rounded-2xl mb-8 h-[60%] flex justify-center items-center group-hover:scale-105 transition-transform duration-300">
-                <img src={"security.svg"} />
-              </div>
-              <h3 className="text-2xl font-bold text-indigo-400 mb-4">
-                Ultra Secure
-              </h3>
-              <p className="text-zinc-400 leading-relaxed">
-                Advanced privacy protection and security features keep your data
-                safe and private.
-              </p>
-            </div>
-
-            <div className="group bg-gradient-to-br from-zinc-800/50 to-zinc-900/80 border border-zinc-700/50 p-8 rounded-2xl hover:bg-gradient-to-br hover:from-zinc-700/60 hover:to-zinc-800/90 hover:border-indigo-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-2">
-              <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-8 rounded-2xl mb-8 h-[60%] flex justify-center items-center group-hover:scale-105 transition-transform duration-300">
-                <img src={"browsing.svg"} />
-              </div>
-              <h3 className="text-2xl font-bold text-indigo-400 mb-4">
-                Collaborative Browsing
-              </h3>
-              <p className="text-zinc-400 leading-relaxed">
-                Browse alone or create sessions with friends for shared web
-                experiences.
-              </p>
-            </div>
-
-            <div className="group bg-gradient-to-br from-zinc-800/50 to-zinc-900/80 border border-zinc-700/50 p-8 rounded-2xl hover:bg-gradient-to-br hover:from-zinc-700/60 hover:to-zinc-800/90 hover:border-indigo-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-2">
-              <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-8 rounded-2xl mb-8 h-[60%] flex justify-center items-center group-hover:scale-105 transition-transform duration-300">
-                <img src={"shared.svg"} />
-              </div>
-              <h3 className="text-2xl font-bold text-indigo-400 mb-4">
-                Session Chat
-              </h3>
-              <p className="text-zinc-400 leading-relaxed">
-                Chat with your team in real-time and share links seamlessly.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-28 bg-gradient-to-b from-zinc-950 to-zinc-900 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-b from-zinc-950 to-zinc-900 relative overflow-hidden">
         <div className="absolute inset-0 w-full h-full pointer-events-none">
           <img
             src="BackgroundLaserpurple.png"
@@ -362,21 +295,101 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="max-w-2xl mx-auto mt-16">
-            <div className="bg-zinc-800 rounded-full h-2 overflow-hidden">
-              <div
-                className="bg-gradient-to-r from-indigo-500 to-indigo-600 h-full transition-all duration-500 ease-out"
-                style={{
-                  width: `${((currentStep + 1) / steps.length) * 100}%`,
-                }}
-              />
-            </div>
-            <div className="flex justify-between mt-2 text-sm text-zinc-500">
-              <span>Progress</span>
-              <span>
-                {currentStep + 1} / {steps.length}
+      <section className="py-22 bg-gradient-to-b from-zinc-950 to-zinc-900 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-950/10 to-transparent"></div>
+
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl lg:text-6xl font-bold text-white mb-8 tracking-tight">
+              <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
+                Why Choose Our Browser
               </span>
+            </h2>
+            <p className="text-xl text-zinc-400 max-w-3xl mx-auto leading-relaxed">
+              Built from the ground up with performance, security, and user
+              experience in mind.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="group bg-gradient-to-br from-zinc-800/50 to-zinc-900/80 border border-zinc-700/50 p-8 rounded-2xl hover:bg-gradient-to-br hover:from-zinc-700/60 hover:to-zinc-800/90 hover:border-indigo-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-2">
+              <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-8 rounded-2xl mb-8 h-[60%] flex justify-center items-center group-hover:scale-105 transition-transform duration-300">
+                <img src={"bookmarks.svg"} />
+              </div>
+              <h3 className="text-2xl font-bold text-indigo-400 mb-4">
+                Bookmarks
+              </h3>
+              <p className="text-zinc-400 leading-relaxed">
+                Save your favorite tabs and open them whenever you want with
+                intelligent organization.
+              </p>
+            </div>
+
+            <div className="group bg-gradient-to-br from-zinc-800/50 to-zinc-900/80 border border-zinc-700/50 p-8 rounded-2xl hover:bg-gradient-to-br hover:from-zinc-700/60 hover:to-zinc-800/90 hover:border-indigo-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-2">
+              <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-8 rounded-2xl mb-8 h-[60%] flex justify-center items-center group-hover:scale-105 transition-transform duration-300">
+                <img src={"tabs.svg"} />
+              </div>
+              <h3 className="text-2xl font-bold text-indigo-400 mb-4">
+                Smart Tabs
+              </h3>
+              <p className="text-zinc-400 leading-relaxed">
+                Easily add and manage all your important tabs with advanced
+                grouping features.
+              </p>
+            </div>
+
+            <div className="group bg-gradient-to-br from-zinc-800/50 to-zinc-900/80 border border-zinc-700/50 p-8 rounded-2xl hover:bg-gradient-to-br hover:from-zinc-700/60 hover:to-zinc-800/90 hover:border-indigo-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-2">
+              <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-8 rounded-2xl mb-8 h-[60%] flex justify-center items-center group-hover:scale-105 transition-transform duration-300">
+                <img src={"preferences.svg"} />
+              </div>
+              <h3 className="text-2xl font-bold text-indigo-400 mb-4">
+                Custom Themes
+              </h3>
+              <p className="text-zinc-400 leading-relaxed">
+                Choose from 30+ beautiful themes to customize your browsing
+                experience.
+              </p>
+            </div>
+
+            <div className="group bg-gradient-to-br from-zinc-800/50 to-zinc-900/80 border border-zinc-700/50 p-8 rounded-2xl hover:bg-gradient-to-br hover:from-zinc-700/60 hover:to-zinc-800/90 hover:border-indigo-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-2">
+              <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-8 rounded-2xl mb-8 h-[60%] flex justify-center items-center group-hover:scale-105 transition-transform duration-300">
+                <img src={"security.svg"} />
+              </div>
+              <h3 className="text-2xl font-bold text-indigo-400 mb-4">
+                Ultra Secure
+              </h3>
+              <p className="text-zinc-400 leading-relaxed">
+                Advanced privacy protection and security features keep your data
+                safe and private.
+              </p>
+            </div>
+
+            <div className="group bg-gradient-to-br from-zinc-800/50 to-zinc-900/80 border border-zinc-700/50 p-8 rounded-2xl hover:bg-gradient-to-br hover:from-zinc-700/60 hover:to-zinc-800/90 hover:border-indigo-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-2">
+              <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-8 rounded-2xl mb-8 h-[60%] flex justify-center items-center group-hover:scale-105 transition-transform duration-300">
+                <img src={"browsing.svg"} />
+              </div>
+              <h3 className="text-2xl font-bold text-indigo-400 mb-4">
+                Collaborative Browsing
+              </h3>
+              <p className="text-zinc-400 leading-relaxed">
+                Browse alone or create sessions with friends for shared web
+                experiences.
+              </p>
+            </div>
+
+            <div className="group bg-gradient-to-br from-zinc-800/50 to-zinc-900/80 border border-zinc-700/50 p-8 rounded-2xl hover:bg-gradient-to-br hover:from-zinc-700/60 hover:to-zinc-800/90 hover:border-indigo-500/30 transition-all duration-500 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-2">
+              <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 p-8 rounded-2xl mb-8 h-[60%] flex justify-center items-center group-hover:scale-105 transition-transform duration-300">
+                <img src={"shared.svg"} />
+              </div>
+              <h3 className="text-2xl font-bold text-indigo-400 mb-4">
+                Session Chat
+              </h3>
+              <p className="text-zinc-400 leading-relaxed">
+                Chat with your team in real-time and share links seamlessly.
+              </p>
             </div>
           </div>
         </div>
