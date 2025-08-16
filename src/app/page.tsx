@@ -128,7 +128,7 @@ export default function Home() {
                 Communicate via chat and watch videos together.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 pt-4">
-                <Button className="bg-gradient-to-r from-indigo-500 to-indigo-700 hover:from-indigo-400 hover:to-indigo-600 text-white font-semibold py-4 px-8 rounded-2xl border border-indigo-400/50 shadow-lg shadow-indigo-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/40 hover:scale-105">
+                <Button className="bg-gradient-to-r from-indigo-500 to-indigo-700 hover:from-indigo-400 hover:to-indigo-600 text-white font-semibold py-6 px-10 rounded-2xl border border-indigo-400/50 shadow-lg shadow-indigo-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/40 hover:scale-105">
                   Join Waitlist
                 </Button>
                 <Button
@@ -137,7 +137,7 @@ export default function Home() {
                       "https://github.com/KreakxX/QuickBrowse";
                   }}
                   variant="outline"
-                  className="border-zinc-600 text-zinc-300 hover:bg-zinc-800 hover:text-white py-4 px-8 rounded-2xl transition-all duration-300 bg-transparent"
+                  className="border-zinc-600 text-zinc-300 hover:bg-zinc-800 hover:text-white py-6 px-10 rounded-2xl transition-all duration-300 bg-transparent"
                 >
                   View Github
                 </Button>
