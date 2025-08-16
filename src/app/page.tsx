@@ -113,18 +113,8 @@ export default function Home() {
       </div>
 
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/LandingPageBackground.png"
-            alt="Tech background"
-            fill
-            className="object-contain opacity-20 scale-150"
-            priority
-          />
-        </div>
-
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="  items-center">
             <div className="text-white space-y-10 ">
               <h1 className="text-6xl lg:text-8xl font-bold leading-[0.9] tracking-tight ">
                 The Future of
@@ -153,48 +143,11 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-
-            <div className="relative">
-              <div className="bg-gradient-to-br from-zinc-800/80 to-zinc-900/90 p-3 rounded-3xl shadow-2xl border border-zinc-700/50 backdrop-blur-sm relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent rounded-3xl"></div>
-                <Image
-                  src="/BrowserInterface2.png"
-                  alt="Browser Interface"
-                  width={800}
-                  height={600}
-                  className="rounded-2xl shadow-xl relative z-10"
-                />
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-b from-zinc-950 to-zinc-900 relative overflow-hidden">
-        <div className="absolute inset-0 w-full h-full pointer-events-none">
-          <img
-            src="BackgroundLaserpurple.png"
-            className="absolute inset-0 w-full h-full opacity-30 pointer-events-none"
-            style={{
-              maskImage:
-                "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.2) 15%, rgba(0,0,0,0.9) 40%, black 60%)",
-              WebkitMaskImage:
-                "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.2) 15%, rgba(0,0,0,0.9) 40%, black 60%)",
-            }}
-          />
-        </div>
-        <div className="absolute inset-0 w-full h-full pointer-events-none">
-          <div
-            className="absolute inset-0 w-full h-full opacity-20 pointer-events-none bg-gradient-to-br from-indigo-500/10 to-purple-600/10"
-            style={{
-              maskImage:
-                "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.2) 15%, rgba(0,0,0,0.9) 40%, black 60%)",
-              WebkitMaskImage:
-                "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.2) 15%, rgba(0,0,0,0.9) 40%, black 60%)",
-            }}
-          />
-        </div>
-
+      <section className="py-20 bg-zinc-950 relative overflow-hidden">
         <div className="container mx-auto px-6 lg:px-8 py-16 relative z-10">
           <div className="text-center mb-16">
             <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight">
@@ -298,9 +251,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-22 bg-gradient-to-b from-zinc-950 to-zinc-900 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-950/10 to-transparent"></div>
-
+      <section className="py-22 bg-zinc-950 relative">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-5xl lg:text-6xl font-bold text-white mb-8 tracking-tight">
