@@ -1,7 +1,82 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import React from "react";
+import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Home() {
+  const steps = [
+    {
+      id: 1,
+      title: "Browsing Sessions",
+      image: "/sharedsession.png",
+      description:
+        "Create browsing sessions and browse together with friends using perfectly synced tabs.",
+      instructions: [
+        "Click 'Create Session' to start a new browsing session",
+        "Share the session code with your friends",
+        "All participants will see the same tabs and navigation",
+        "Navigate together in perfect synchronization",
+      ],
+    },
+    {
+      id: 2,
+      title: "Split Screen",
+      image: "/SplitScreen.png",
+      description:
+        "View multiple tabs simultaneously to boost your productivity and multitasking.",
+      instructions: [
+        "Open multiple tabs in your session",
+        "Click the 'Split View' button in the tab bar",
+        "Resize panels to focus on what matters most",
+        "Boost your productivity",
+      ],
+    },
+    {
+      id: 3,
+      title: "Watch Together",
+      image: "/Watchtogether.png",
+      description:
+        "Enjoy synchronized video watching with friends, featuring real-time synchronization.",
+      instructions: [
+        "Get a video Link from Youtube",
+        "Click on the Watch together button in the tab bar",
+        "Share your Video",
+        "Playback controls are synchronized for everyone",
+      ],
+    },
+    {
+      id: 4,
+      title: "Built-in Chat",
+      image: "/SessionChat.png",
+      description:
+        "Communicate seamlessly with smart link highlighting and media sharing capabilities.",
+      instructions: [
+        "Open the chat panel from the sidebar",
+        "Send messages to all session participants",
+        "Share links that automatically highlight for everyone",
+        "Communicate with all your friends or co workers",
+      ],
+    },
+  ];
+
+  const [currentStep, setCurrentStep] = useState(0);
+
+  const nextStep = () => {
+    setCurrentStep((prev: any) => (prev + 1) % steps.length);
+  };
+
+  const prevStep = () => {
+    setCurrentStep((prev: any) => (prev - 1 + steps.length) % steps.length);
+  };
+
+  const goToStep = (index: number) => {
+    setCurrentStep(index);
+  };
+
+  const current = steps[currentStep];
   return (
     <div className="min-h-screen bg-zinc-950 relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
@@ -50,7 +125,7 @@ export default function Home() {
             </div>
 
             <div className="relative">
-              <div className="bg-gradient-to-br from-zinc-800/80 to-zinc-900/90 p-6 rounded-3xl shadow-2xl border border-zinc-700/50 backdrop-blur-sm relative">
+              <div className="bg-gradient-to-br from-zinc-800/80 to-zinc-900/90 p-3 rounded-3xl shadow-2xl border border-zinc-700/50 backdrop-blur-sm relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent rounded-3xl"></div>
                 <Image
                   src="/BrowserInterface2.png"
@@ -162,113 +237,152 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-32 bg-gradient-to-b from-zinc-950 to-zinc-900 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-indigo-400/15 to-indigo-600/10 rounded-full blur-xl animate-pulse"></div>
+      <section className="py-28 bg-gradient-to-b from-zinc-950 to-zinc-900 relative overflow-hidden">
+        <div className="absolute inset-0 w-full h-full pointer-events-none">
+          <img
+            src="BackgroundLaserpurple.png"
+            className="absolute inset-0 w-full h-full opacity-30 pointer-events-none"
+            style={{
+              maskImage:
+                "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.2) 15%, rgba(0,0,0,0.9) 40%, black 60%)",
+              WebkitMaskImage:
+                "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.2) 15%, rgba(0,0,0,0.9) 40%, black 60%)",
+            }}
+          />
+        </div>
+        <div className="absolute inset-0 w-full h-full pointer-events-none">
           <div
-            className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-zinc-400/20 to-indigo-400/15 rounded-full blur-lg animate-bounce"
-            style={{ animationDuration: "3s" }}
-          ></div>
-          <div
-            className="absolute top-1/3 left-1/4 w-16 h-16 bg-gradient-to-br from-indigo-300/25 to-zinc-300/15 rounded-full blur-md animate-pulse"
-            style={{ animationDelay: "1s" }}
-          ></div>
-          <div
-            className="absolute top-2/3 right-1/3 w-20 h-20 bg-gradient-to-br from-zinc-400/18 to-indigo-500/12 rounded-full blur-lg animate-bounce"
-            style={{ animationDuration: "4s", animationDelay: "2s" }}
-          ></div>
-          <div
-            className="absolute bottom-40 left-16 w-28 h-28 bg-gradient-to-br from-indigo-400/12 to-zinc-400/18 rounded-full blur-xl animate-pulse"
-            style={{ animationDelay: "0.5s" }}
-          ></div>
-          <div
-            className="absolute bottom-20 right-10 w-36 h-36 bg-gradient-to-br from-zinc-300/15 to-indigo-300/20 rounded-full blur-2xl animate-bounce"
-            style={{ animationDuration: "5s" }}
-          ></div>
+            className="absolute inset-0 w-full h-full opacity-20 pointer-events-none bg-gradient-to-br from-indigo-500/10 to-purple-600/10"
+            style={{
+              maskImage:
+                "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.2) 15%, rgba(0,0,0,0.9) 40%, black 60%)",
+              WebkitMaskImage:
+                "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.2) 15%, rgba(0,0,0,0.9) 40%, black 60%)",
+            }}
+          />
         </div>
 
-        <div className="container mx-auto px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col items-center justify-center text-center">
-            <h2 className="text-6xl lg:text-7xl font-bold text-white mb-24 tracking-tight hover:scale-105 transition-transform duration-300">
+        <div className="container mx-auto px-6 lg:px-8 py-16 relative z-10">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight">
               <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
-                Browser Showcase
+                How It Works
               </span>
-            </h2>
+            </h1>
+            <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
+              Follow these simple steps to get the most out of your browsing
+              sessions
+            </p>
+          </div>
 
-            <div className="space-y-32 max-w-6xl">
-              {/* Session Chat Feature */}
-              <div className="group">
-                <h3 className="text-4xl lg:text-5xl font-bold text-white mb-12 tracking-tight group-hover:scale-105 transition-all duration-300">
-                  <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
-                    Session Chat
-                  </span>
-                </h3>
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-zinc-500/10 rounded-3xl blur-xl"></div>
+          <div className="flex justify-center mb-12">
+            <div className="flex space-x-4">
+              {steps.map((step, index) => (
+                <button
+                  key={step.id}
+                  onClick={() => goToStep(index)}
+                  className={`w-12 h-12 rounded-full border-2 transition-all duration-300 flex items-center justify-center font-semibold ${
+                    index === currentStep
+                      ? "border-indigo-400 bg-indigo-400 text-white"
+                      : "border-zinc-600 text-zinc-400 hover:border-indigo-500 hover:text-indigo-400"
+                  }`}
+                >
+                  {index + 1}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="order-2 lg:order-1">
+                <div className="bg-gradient-to-br from-zinc-800/40 to-zinc-900/60 p-8 rounded-3xl border border-zinc-700/30 backdrop-blur-sm relative shadow-md hover:shadow-lg hover:shadow-indigo-500/50 transition-all duration-500 ">
+                  <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent rounded-3xl"></div>
                   <img
-                    src="SessionChat.png"
-                    alt="Session Chat Feature"
-                    className="w-full rounded-3xl shadow-2xl border border-zinc-700/50 hover:scale-[1.02] transition-all duration-500 relative z-10"
+                    src={current.image || "/placeholder.svg"}
+                    alt={current.title}
+                    className="w-full h-80 object-cover rounded-xl border border-zinc-600/50 shadow-lg relative z-10"
                   />
                 </div>
               </div>
 
-              {/* Split Screen Feature */}
-              <div className="group">
-                <h3 className="text-4xl lg:text-5xl font-bold text-white mb-12 tracking-tight group-hover:scale-105 transition-all duration-300">
-                  <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
-                    Split Screen
-                  </span>
-                </h3>
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-zinc-500/10 to-indigo-500/10 rounded-3xl blur-xl"></div>
-                  <img
-                    src="SplitScreen.png"
-                    alt="Split Screen Feature"
-                    className="w-full rounded-3xl shadow-2xl border border-zinc-700/50 hover:scale-[1.02] transition-all duration-500 relative z-10"
-                  />
+              <div className="order-1 lg:order-2">
+                <div className="mb-8">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-indigo-500/20 to-indigo-600/30 rounded-xl flex items-center justify-center">
+                      <div className="w-4 h-4 bg-indigo-400 rounded-full"></div>
+                    </div>
+                    <span className="text-indigo-400 font-medium">
+                      Step {currentStep + 1} of {steps.length}
+                    </span>
+                  </div>
+                  <h2 className="text-4xl font-bold text-white mb-4">
+                    {current.title}
+                  </h2>
+                  <p className="text-zinc-400 text-lg leading-relaxed mb-8">
+                    {current.description}
+                  </p>
                 </div>
-              </div>
 
-              {/* Shared Session Feature */}
-              <div className="group">
-                <h3 className="text-4xl lg:text-5xl font-bold text-white mb-12 tracking-tight group-hover:scale-105 transition-all duration-300">
-                  <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
-                    Shared Session
-                  </span>
-                </h3>
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-zinc-500/10 rounded-3xl blur-xl"></div>
-                  <img
-                    src="sharedsession.png"
-                    alt="Shared Session Feature"
-                    className="w-full rounded-3xl shadow-2xl border border-zinc-700/50 hover:scale-[1.02] transition-all duration-500 relative z-10"
-                  />
+                <div className="mb-8">
+                  <h3 className="text-xl font-semibold text-indigo-300 mb-4">
+                    Step-by-step guide:
+                  </h3>
+                  <div className="space-y-3">
+                    {current.instructions.map((instruction, index) => (
+                      <div key={index} className="flex items-start gap-3">
+                        <div className="w-6 h-6 bg-indigo-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <div className="w-2 h-2 bg-indigo-400 rounded-full"></div>
+                        </div>
+                        <p className="text-zinc-300">{instruction}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
 
-              {/* Watch Together Feature */}
-              <div className="group">
-                <h3 className="text-4xl lg:text-5xl font-bold text-white mb-12 tracking-tight group-hover:scale-105 transition-all duration-300">
-                  <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
-                    Watch Together
-                  </span>
-                </h3>
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-zinc-500/10 to-indigo-500/10 rounded-3xl blur-xl"></div>
-                  <img
-                    src="Watchtogether.png"
-                    alt="Watch Together Feature"
-                    className="w-full rounded-3xl shadow-2xl border border-zinc-700/50 hover:scale-[1.02] transition-all duration-500 relative z-10"
-                  />
+                <div className="flex items-center gap-4">
+                  <Button
+                    onClick={prevStep}
+                    variant="outline"
+                    size="lg"
+                    className="border-zinc-600 text-zinc-300 hover:bg-zinc-800 hover:text-white bg-transparent"
+                  >
+                    <ChevronLeft className="w-4 h-4 mr-2" />
+                    Previous
+                  </Button>
+                  <Button
+                    onClick={nextStep}
+                    size="lg"
+                    className="bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 text-white"
+                  >
+                    Next
+                    <ChevronRight className="w-4 h-4 ml-2" />
+                  </Button>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div className="max-w-2xl mx-auto mt-16">
+            <div className="bg-zinc-800 rounded-full h-2 overflow-hidden">
+              <div
+                className="bg-gradient-to-r from-indigo-500 to-indigo-600 h-full transition-all duration-500 ease-out"
+                style={{
+                  width: `${((currentStep + 1) / steps.length) * 100}%`,
+                }}
+              />
+            </div>
+            <div className="flex justify-between mt-2 text-sm text-zinc-500">
+              <span>Progress</span>
+              <span>
+                {currentStep + 1} / {steps.length}
+              </span>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-32 bg-gradient-to-b from-zinc-900 to-zinc-950 relative">
+      {/* <section className="py-32 bg-gradient-to-b from-zinc-900 to-zinc-950 relative">
         <div className="absolute inset-0 w-full h-full pointer-events-none">
           <img
             src="BackgroundLaserpurple.png"
@@ -378,7 +492,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
