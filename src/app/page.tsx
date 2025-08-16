@@ -116,9 +116,9 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <div className="  items-center">
             <div className="text-white space-y-10 ">
-              <h1 className="text-6xl lg:text-8xl font-bold leading-[0.9] tracking-tight ">
+              <h1 className="text-6xl lg:text-8xl font-bold leading-[0.9] tracking-tight animate-slide-up ">
                 The Future of
-                <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent block mt-2 pb-5">
+                <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent block mt-2 pb-5 ">
                   Web Browsing
                 </span>
               </h1>
@@ -190,12 +190,11 @@ export default function Home() {
           <div className="w-full">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="order-2 lg:order-1">
-                <div className="bg-gradient-to-br from-zinc-800/40 to-zinc-900/60 p-8 rounded-3xl border border-zinc-700/30 backdrop-blur-sm relative shadow-md hover:shadow-lg hover:shadow-indigo-500/50 transition-all duration-500 ">
-                  <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent rounded-3xl"></div>
+                <div className="bg-gradient-to-br ml-10 from-zinc-800/40 to-zinc-900/60 p-8 rounded-3xl border border-zinc-700/30 backdrop-blur-sm relative shadow-md hover:shadow-lg hover:shadow-indigo-500/50 transition-all duration-500 ">
                   <img
                     src={current.image || "/placeholder.svg"}
                     alt={current.title}
-                    className="w-full h-153 object-cover rounded-xl border border-zinc-600/50 shadow-lg relative z-10"
+                    className="w-full  h-146 object-cover rounded-xl border border-zinc-600/50 shadow-lg relative z-10"
                   />
                 </div>
               </div>
@@ -422,118 +421,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-
-      {/* <section className="py-32 bg-gradient-to-b from-zinc-900 to-zinc-950 relative">
-        <div className="absolute inset-0 w-full h-full pointer-events-none">
-          <img
-            src="BackgroundLaserpurple.png"
-            className="absolute inset-0 w-full h-full opacity-30 pointer-events-none"
-            style={{
-              maskImage:
-                "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.2) 15%, rgba(0,0,0,0.9) 40%, black 60%)",
-              WebkitMaskImage:
-                "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.2) 15%, rgba(0,0,0,0.9) 40%, black 60%)",
-            }}
-          />
-        </div>
-
-        <div className="container mx-auto px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <div>
-              <h2 className="text-5xl lg:text-6xl font-bold text-white mb-16 tracking-tight">
-                <span className="bg-gradient-to-r from-indigo-300 via-indigo-400 to-indigo-600 bg-clip-text text-transparent">
-                  What Makes It Special
-                </span>
-              </h2>
-              <div className="space-y-10">
-                <div className="flex items-start gap-6 group">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-indigo-500/20 to-indigo-600/30 rounded-xl flex items-center justify-center mt-1 group-hover:scale-110 transition-transform duration-300">
-                    <div className="w-4 h-4 bg-indigo-400 rounded-full"></div>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-semibold text-indigo-300 mb-3">
-                      Browsing Sessions
-                    </h3>
-                    <p className="text-zinc-400 leading-relaxed text-lg">
-                      Create browsing sessions and browse together with friends
-                      using perfectly synced tabs.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-6 group">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-indigo-500/20 to-indigo-600/30 rounded-xl flex items-center justify-center mt-1 group-hover:scale-110 transition-transform duration-300">
-                    <div className="w-4 h-4 bg-indigo-400 rounded-full"></div>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-semibold text-indigo-300 mb-3">
-                      Split Screen
-                    </h3>
-                    <p className="text-zinc-400 leading-relaxed text-lg">
-                      View multiple tabs simultaneously to boost your
-                      productivity and multitasking.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-6 group">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-indigo-500/20 to-indigo-600/30 rounded-xl flex items-center justify-center mt-1 group-hover:scale-110 transition-transform duration-300">
-                    <div className="w-4 h-4 bg-indigo-400 rounded-full"></div>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-semibold text-indigo-300 mb-3">
-                      Watch Together
-                    </h3>
-                    <p className="text-zinc-400 leading-relaxed text-lg">
-                      Enjoy synchronized video watching with friends, featuring
-                      real-time synchronization.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-6 group">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-indigo-500/20 to-indigo-600/30 rounded-xl flex items-center justify-center mt-1 group-hover:scale-110 transition-transform duration-300">
-                    <div className="w-4 h-4 bg-indigo-400 rounded-full"></div>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-semibold text-indigo-300 mb-3">
-                      Built-in Chat
-                    </h3>
-                    <p className="text-zinc-400 leading-relaxed text-lg">
-                      Communicate seamlessly with smart link highlighting and
-                      media sharing capabilities.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-zinc-800/40 to-zinc-900/60 grid grid-cols-2 gap-6 p-10 rounded-3xl border border-zinc-700/30 backdrop-blur-sm relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent rounded-3xl"></div>
-              <img
-                className="rounded-xl border border-zinc-600/50 shadow-lg hover:scale-105 transition-transform duration-300 relative z-10"
-                src="splitScreen.png"
-                alt="Split Screen Feature"
-              />
-              <img
-                className="rounded-xl border border-zinc-600/50 shadow-lg hover:scale-105 transition-transform duration-300 relative z-10"
-                src="Watchtogether.png"
-                alt="Watch Together Feature"
-              />
-              <img
-                className="rounded-xl border border-zinc-600/50 shadow-lg hover:scale-105 transition-transform duration-300 relative z-10"
-                src="SessionChat.png"
-                alt="Session Chat Feature"
-              />
-              <img
-                className="rounded-xl border border-zinc-600/50 shadow-lg hover:scale-105 transition-transform duration-300 relative z-10"
-                src="sharedsession.png"
-                alt="Shared Session Feature"
-              />
-            </div>
-          </div>
-        </div>
-      </section> */}
     </div>
   );
 }
