@@ -107,12 +107,11 @@ export default function Home() {
     <div className="min-h-screen bg-zinc-950 relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-indigo-500/25 via-zinc-400/10 to-indigo-600/15 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -top-32 right-16 w-80 h-80 bg-gradient-to-bl from-zinc-400/12 via-indigo-400/25 to-zinc-500/8 rounded-full blur-2xl"></div>
-        <div className="absolute top-1/2 -left-32 w-64 h-64 bg-gradient-to-r from-indigo-400/20 to-zinc-400/15 rounded-full blur-xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-gradient-to-tl from-indigo-300/15 to-zinc-300/10 rounded-full blur-2xl"></div>
       </div>
 
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute -top-12 right-16 w-80 h-80 bg-gradient-to-bl from-zinc-400/12 via-indigo-400/25 to-zinc-500/8 rounded-full blur-2xl"></div>
+
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <div className="  items-center">
             <div className="text-white space-y-10 ">
@@ -190,11 +189,11 @@ export default function Home() {
           <div className="w-full">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="order-2 lg:order-1">
-                <div className="bg-gradient-to-br ml-10 from-zinc-800/40 to-zinc-900/60 p-8 rounded-3xl border border-zinc-700/30 backdrop-blur-sm relative shadow-md hover:shadow-lg hover:shadow-indigo-500/50 transition-all duration-500 ">
+                <div className="bg-gradient-to-br ml-5  from-zinc-800/40 to-zinc-900/60 p-8 rounded-3xl border border-zinc-700/30 backdrop-blur-sm relative shadow-md hover:shadow-lg hover:shadow-indigo-500/50 transition-all duration-500 ">
                   <img
                     src={current.image || "/placeholder.svg"}
                     alt={current.title}
-                    className="w-full  h-146 object-cover rounded-xl border border-zinc-600/50 shadow-lg relative z-10"
+                    className="w-full  h-135 object-cover rounded-xl border border-zinc-600/50 shadow-lg relative z-10"
                   />
                 </div>
               </div>
@@ -259,6 +258,12 @@ export default function Home() {
       </section>
 
       <section className="py-22 bg-zinc-950 relative">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-indigo-500/25 via-zinc-400/10 to-indigo-600/15 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-32 right-16 w-80 h-80 bg-gradient-to-bl from-zinc-400/12 via-indigo-400/25 to-zinc-500/8 rounded-full blur-2xl"></div>
+
+          <div className="absolute top-1/2 -left-32 w-64 h-64 bg-gradient-to-r from-indigo-400/20 to-zinc-400/15 rounded-full blur-xl"></div>
+        </div>
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-5xl lg:text-6xl font-bold text-white mb-8 tracking-tight">
